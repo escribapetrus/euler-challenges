@@ -18,15 +18,4 @@ defmodule Challenges.SmallestMultiple do
     get(Stream.filter(x,&(rem(&1,n) == 0)), n-1)
   end
 
-  # def get(x \\ 1) do
-  #   cond do
-  #     (divisible?(x)) -> x
-  #     true -> get(x+1)
-  #   end
-  # end
-  # def divisible?(n) do
-  #   1..20
-  #   |> Enum.all?(&(rem(n,&1) == 0))
-  # end
-
 end
