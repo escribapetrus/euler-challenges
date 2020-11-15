@@ -2,11 +2,15 @@ defmodule Challenges.EvenFibs do
 
   def sum(max), do: iter_fibs(1,0,max)
 
-  def fib(n), do: fib(1,1,n)
-
-  defp fib(x,_,0), do: x
-  defp fib(x,y,n) do
+  def fib(n), do: fib(0,1,n)
+  def fib(x,_,0), do: x
+  def fib(x,y,n) do
     fib(y, x+y, n-1)
+  end
+
+  def fibs(n) do
+    Stream.map(0..n, &(fib &1))
+    |> Enum.to_list()
   end
 
   defp iter_fibs(x, res, max) do
