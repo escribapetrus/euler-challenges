@@ -4,6 +4,7 @@ defmodule Challenges.SumSquareDifference do
   hence the difference between the sum of the squares of the first ten natural numbers and the square of the sum is.
   Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.
   """
+
   def get(n), do: sum_squares(n) - square_sum(n) |> abs
 
   def sum_squares(n) do

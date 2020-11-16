@@ -4,6 +4,7 @@ defmodule Challenges.Multiples3or5 do
   The sum of these multiples is 23.
   Find the sum of all the multiples of 3 or 5 below 1000.
   """
+
   def sum(x) do
     sum(x-1,0)
   end

@@ -1,4 +1,8 @@
 defmodule Challenges.LargestPrimeFactor do
+  @moduledoc """
+  The prime factors of 13195 are 5, 7, 13 and 29.
+  What is the largest prime factor of the number 600851475143 ?
+  """
 
   def get(x), do: get(x,2)
 
@@ -15,15 +19,5 @@ defmodule Challenges.LargestPrimeFactor do
       true -> get(x, div + 1)
     end
   end
-
-  # def prime?(x), do: prime?(x,2)
-  # def prime?(1,_), do: true
-  # def prime?(x, div) do
-  #   cond do
-  #     (x == div) -> true
-  #     (rem(x,div) == 0) -> false
-  #     true -> prime?(x, div + 1)
-  #   end
-  # end
 
 end
