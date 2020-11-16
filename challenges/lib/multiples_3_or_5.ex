@@ -18,5 +18,4 @@ defmodule Challenges.Multiples3or5 do
     end
   end
 
-
 end

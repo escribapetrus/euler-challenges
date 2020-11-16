@@ -7,6 +7,4 @@ defmodule Multiples3or5Test do
     assert sum(1000) == 233168
   end
 
-
-
 end

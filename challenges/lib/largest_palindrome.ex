@@ -1,11 +1,7 @@
-defmodule Challenges.LargestPalindrome do
+defmodule Challenges.LargestPalindromeProduct do
 
- def get do
-  lis = for x <- 111..999, y <- 111..999, do: x * y
-  get_biggest_palindrome(lis)
- end
-
-  def get_biggest_palindrome(lis) do
+  def get(lis) do
+    lis = for x <- lis, y <- lis, do: x * y
     lis
     |> Enum.filter(&(palindrome?(&1)))
     |> Enum.reduce(fn x,y -> if x > y do x else y end end)

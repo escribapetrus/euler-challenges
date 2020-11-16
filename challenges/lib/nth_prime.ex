@@ -1,19 +1,19 @@
-defmodule Challenges.XP do
+defmodule Challenges.NthPrime do
   @moduledoc """
     By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see that the 6th prime is 13.
     What is the 10 001st prime number?
   """
   def get(n) do
-    primes = Stream.iterate(2, &(nextPrime(&1)))
+    primes = Stream.iterate(2, &(next_prime(&1)))
     primes
     |> Enum.take(n)
     |> Enum.at(n - 1)
   end
 
-  def nextPrime(x) do
+  def next_prime(x) do
     cond do
       (prime? x + 1) -> x + 1
-      true -> nextPrime(x + 1)
+      true -> next_prime(x + 1)
     end
   end
 
