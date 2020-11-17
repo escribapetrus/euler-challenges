@@ -14,10 +14,11 @@ class TestPrimeFactors(unittest.TestCase):
         self.assertEqual(palindrome.reverse(10001),10001)
 
     def test_get_largest_palindrome_product_of_n_digit_number(self):
-        2_digits = [x for x in range(11,1000)]
-        3_digits = [x for x in range(111,1000)]
-        self.assertEqual(palindrome.largest_product(2_digits, 9009))
-        self.assertEqual(palindrome.largest_product(3_digits, 906609))
+        # digits_2 = [x for x in range(11,1000)]
+        # digits_3 = [x for x in range(111,1000)]
+        # self.assertEqual(palindrome.largest_product(digits_2), 9009)
+        # self.assertEqual(palindrome.largest_product(digits_3), 906609)
+        self.assertEqual(palindrome.largest_product(), 9009)
 
 if __name__ == '__main__':
     unittest.main()

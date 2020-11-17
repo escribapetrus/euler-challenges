@@ -15,7 +15,7 @@ defmodule LargestPalindromeTest do
 
   test "get largest palindrome of n-digit numbers" do
     assert get(11..99) == 9009
-    assert get(111..999) == 906609
+    assert get(101..999) == 906609
   end
 
 end
