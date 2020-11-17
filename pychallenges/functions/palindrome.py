@@ -14,9 +14,11 @@ def is_(x):
     else:
         return False
 
-def largest_product():
-    products = [[x*y] for x in range(11,100) if is_(x*y) for y in range(11,100)] 
-    reduced = reduce(lambda x,y: x if x >= y else y, filtered)
+def largest_product(n):
+    min_ = 1 + 10**(n-1)
+    max_ = 10**n
+    products = [x*y for x in range(min_,max_) for y in range(min_,max_) if is_(x*y)] 
+    reduced = reduce(lambda x,y: x if x >= y else y, products)
     return reduced
 
     # filtered = filter(lambda x: is_(x), product)

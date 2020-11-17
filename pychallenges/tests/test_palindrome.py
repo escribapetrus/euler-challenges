@@ -1,7 +1,7 @@
 import unittest
 from functions import palindrome
 
-class TestPrimeFactors(unittest.TestCase):
+class TestPalindrome(unittest.TestCase):
 
     def test_if_number_is_palindrome(self):
         self.assertTrue(palindrome.is_(1000001))
@@ -14,11 +14,8 @@ class TestPrimeFactors(unittest.TestCase):
         self.assertEqual(palindrome.reverse(10001),10001)
 
     def test_get_largest_palindrome_product_of_n_digit_number(self):
-        # digits_2 = [x for x in range(11,1000)]
-        # digits_3 = [x for x in range(111,1000)]
-        # self.assertEqual(palindrome.largest_product(digits_2), 9009)
-        # self.assertEqual(palindrome.largest_product(digits_3), 906609)
-        self.assertEqual(palindrome.largest_product(), 9009)
+        self.assertEqual(palindrome.largest_product(2), 9009)
+        self.assertEqual(palindrome.largest_product(3), 906609)
 
 if __name__ == '__main__':
     unittest.main()
