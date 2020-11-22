@@ -21,17 +21,6 @@ defmodule Challenges.NthPrime do
     end
   end
 
-  #trial division
-  # def prime?(x), do: prime?(x,2)
-  # def prime?(1, _), do: true
-  # def prime?(x, div) do
-  #   cond do
-  #     (x == div) -> true
-  #     (rem(x,div) == 0) -> false
-  #     true -> prime?(x, div + 1)
-  #   end
-  # end
-
   def prime?(x), do: prime?(x,2)
   def prime?(x, _) when x in [2,3], do: true
   def prime?(x,div) do
