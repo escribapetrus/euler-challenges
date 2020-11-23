@@ -33,3 +33,14 @@ def take(n):
 
 def nth(x):
     return take(x)[x-1]
+
+def below(maxi):
+    el = next_(0)
+    res = []
+    while el < maxi:
+        res.append(el)
+        el = next_(el)
+    return res
+
+def sum_below(maxi):
+    return sum(below(maxi))
