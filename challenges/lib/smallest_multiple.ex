@@ -6,7 +6,7 @@ defmodule Challenges.SmallestMultiple do
   """
 
   def get(n) do
-    Stream.iterate(1,&(&1+1))
+    Stream.iterate(n,&(&1+n))
     |> get(n)
     |> Enum.take(1)
     |> Enum.at(0)
